@@ -2,6 +2,8 @@
 
 My name is Troy Krezine and I'll be your instructor for this class.
 
+![Instructor Photo](Instructor_Photo.jpg)
+
 I started teaching at Mid-State in September 2024. Before that I spent about 25 years in IT and have held just about every role there is — helpdesk, server engineer, project manager, and manager of multiple IT teams spanning operations, development, automation and global monitoring in a Fortune 500 company, plus local government. Before my first IT job, I did concrete work. I mention that because **there are many paths into this field, and the value of what you do and how you work matters more than where you started.**
 
 I'm a graduate of North Central Technical College with an Associate's in IT Networking, I'm **CompTIA Security+ certified**, and I'm currently pursuing my bachelor's degree in Education and Teaching at UW-Stout. I'm relatively new to teaching in a formal classroom, but no stranger to mentoring and developing people so they become successful. I'm passionate about that part, and I root for the underdog who fights.
