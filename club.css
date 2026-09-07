@@ -1,0 +1,482 @@
+/* Cyber Cougars stylesheet. Fetched at view time by the Blackboard
+   shell, and used directly by the built pages in this folder.
+
+   Push a change here and every course showing the shell restyles on the
+   next page load. Nobody re-pastes anything.
+
+   NOTE FOR WHOEVER EDITS THIS NEXT: the shell does NOT <link> this file.
+   raw.githubusercontent.com serves it as text/plain with nosniff, and
+   browsers refuse to apply a stylesheet with that content type. The
+   shell fetches it as text and builds a <style> element instead. That is
+   deliberate -- do not 'simplify' it back to a <link>. */
+/* ============================================================
+     CYBER COUGARS CLUB CSS -- canonical.
+     This block is the single source of truth for club document
+     styling. Copy it whole into a club document. Do not fork it
+     per-document, and never copy CSS or markup out of a finished
+     club document -- a shipped announcement is a worked example,
+     not a source.
+
+     PART A is lifted verbatim from
+     Course_Build_Pipeline/PLATFORM_REFERENCE.html and re-tokenised
+     to the club palette. PART B is club-only and has no upstream.
+     See CLUB_COMPONENTS.md for what diverged and why.
+     ============================================================ */
+
+  /* ---------- PART A -- carried from the platform reference ---------- */
+
+  :root{
+    --crimson:#83142C; --crimson-deep:#5E0E1F; --gold:#FDB71A;
+    --ink:#231F20; --body:#2b2b2e; --muted:#6a6a70; --line:#e4e2e0;
+    --paper:#ffffff; --shell:#f4f2f0; --ok:#2e7d32;
+    --grey:#424143;
+    --head:Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    --txt:Calibri, 'Segoe UI', Candara, 'Trebuchet MS', sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{margin:0;background:var(--shell);color:var(--body);font-family:var(--txt);font-size:16px;line-height:1.65;padding:40px 20px 80px;}
+  .ticket{max-width:860px;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:10px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.04),0 8px 28px rgba(0,0,0,.06);}
+
+  /* status strip */
+  .status-strip{display:flex;flex-wrap:wrap;background:#faf8f6;border-bottom:1px solid var(--line);}
+  .status-strip .cell{padding:12px 20px;border-right:1px solid var(--line);flex:1 1 auto;min-width:130px;}
+  .status-strip .cell:last-child{border-right:none;}
+  .status-strip .label{font-size:.66rem;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:3px;}
+  .status-strip .value{font-family:var(--head);font-weight:500;font-size:.9rem;color:var(--ink);}
+  .pill{display:inline-block;background:var(--gold);color:#3a2a00;font-weight:700;font-size:.78rem;padding:2px 10px;border-radius:20px;letter-spacing:.02em;}
+
+
+  /* subject */
+  .subject{padding:26px 32px 6px;}
+  .subject .label{font-size:.66rem;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:6px;}
+  .subject h1{font-family:var(--head);font-weight:700;font-size:1.5rem;line-height:1.25;color:var(--ink);margin:0;}
+
+
+  /* body */
+  .body-wrap{padding:8px 32px 36px;}
+  .body-wrap p{margin:0 0 16px;}
+  .body-wrap h2{font-family:var(--head);font-weight:700;font-size:1.12rem;color:var(--crimson);margin:34px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--gold);display:inline-block;}
+  .body-wrap h3{font-family:var(--head);font-weight:700;font-size:1rem;color:var(--ink);margin:22px 0 8px;}
+
+  /* orientation callouts */
+  .orient{border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:6px;background:#fffdf8;padding:16px 20px;margin:18px 0;}
+  .orient .oh{font-family:var(--head);font-weight:700;color:var(--crimson);font-size:.95rem;margin:0 0 8px;}
+  .orient p:last-child{margin-bottom:0;}
+
+
+  /* heads-up callout (expect-this alert; non-scored) */
+  .headsup{border:1px solid #f3e3a3;border-left:4px solid var(--gold);background:#fffaf0;border-radius:6px;padding:14px 18px;margin:16px 0;}
+  .headsup .hu-tag{font-family:var(--head);font-weight:700;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#6b4e00;margin-bottom:6px;}
+  .headsup .hu-tag::before{content:"\26A0";margin-right:8px;}
+  .headsup p{margin:0;font-size:.95rem;}
+
+
+  /* references block (APA 7th) — ungraded academic layer rendered AFTER the ticket, outside the fiction (Guided Practical Spec Part 5C) */
+  .refs{max-width:860px;margin:20px auto 0;padding:4px 32px 0;}
+  .refs .refs-head{font-family:var(--head);font-weight:700;font-size:1rem;color:var(--crimson);margin:0 0 8px;padding-bottom:8px;border-bottom:2px solid var(--gold);display:inline-block;}
+  .refs .refs-preface{font-size:.82rem;color:var(--muted);font-style:italic;line-height:1.55;margin:0 0 16px;}
+  .refs ul.refs-list{list-style:none;margin:0;padding:0;}
+  .refs .refs-list li{font-size:.9rem;color:var(--body);line-height:1.6;margin:0 0 12px;padding-left:1.8em;text-indent:-1.8em;}
+  .refs .refs-list li:last-child{margin-bottom:0;}
+  .refs .refs-list em{font-style:italic;color:var(--ink);}
+  .refs .refs-list a{color:var(--crimson-deep);text-decoration:none;word-break:break-word;}
+  .refs .refs-list a:hover{text-decoration:underline;}
+
+  .cyc{border:1px solid var(--line);border-radius:10px;margin:16px 0;overflow:hidden;background:var(--paper);}
+  .cyc[open]{box-shadow:0 2px 8px rgba(0,0,0,.07);}
+  .cyc-sum{list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;padding:15px 20px;background:#faf8f6;border-left:5px solid var(--crimson);user-select:none;}
+  .cyc-sum::-webkit-details-marker{display:none;}
+  .cyc-sum:hover{background:#f2ece8;}
+  .cyc[open] .cyc-sum{border-bottom:1px solid var(--line);}
+  .cyc-chev{color:var(--crimson);font-size:.8rem;transition:transform .18s ease;flex:0 0 auto;}
+  .cyc[open] .cyc-chev{transform:rotate(90deg);}
+  .cyc-k{font-family:var(--head);font-weight:700;font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--crimson);white-space:nowrap;flex:0 0 auto;}
+  .cyc-t{font-family:var(--head);font-weight:700;font-size:1.02rem;color:var(--ink);flex:1 1 auto;line-height:1.3;}
+  .cyc-badge{font-family:var(--head);font-weight:700;font-size:.66rem;letter-spacing:.02em;background:var(--crimson);color:#fff;padding:4px 11px;border-radius:20px;white-space:nowrap;flex:0 0 auto;}
+  .cyc-az .cyc-sum{border-left-color:var(--crimson);background:#f7eff0;}
+  .cyc .cycle-inner{padding:6px 22px 20px;}
+  .cyc-controls{display:flex;gap:10px;margin:0 0 16px;}
+  .cyc-controls button{font-family:var(--head);font-weight:700;font-size:.75rem;padding:7px 14px;border:1px solid var(--line);background:var(--paper);border-radius:6px;cursor:pointer;color:var(--crimson);}
+  .cyc-controls button:hover{background:#faf8f6;}
+
+  .ticket-footer{background:#faf8f6;border-top:1px solid var(--line);padding:18px 32px;font-size:.78rem;color:var(--muted);display:flex;align-items:center;gap:12px;flex-wrap:wrap;}
+  .ticket-footer .status-done{color:var(--ok);font-weight:700;font-family:var(--head);}
+  .ticket-footer .spacer{margin-left:auto;}
+
+  @media (max-width:560px){
+    body{padding:16px 8px 48px;}
+    .desk-header{padding:30px 20px 0;}
+    .desk-header img.seal{width:200px;height:200px;margin-bottom:18px;}
+    .desk-header .desk-name{font-size:1.65rem;}
+    .desk-header .desk-sub{letter-spacing:.09em;font-size:.72rem;}
+    .desk-rail{margin-top:22px;font-size:.68rem;letter-spacing:.05em;gap:0 7px;}
+    .subject,.body-wrap,.ticket-footer,.charter{padding-left:20px;padding-right:20px;}
+    .subject h1{font-size:1.25rem;}
+    .status-strip .cell{min-width:50%;}
+    .actions .a-btns .join{width:100%;text-align:center;}
+    .evgrid .ev-cell{flex:1 1 100%;border-right:none;
+      border-bottom:1px solid var(--line);}
+    .evgrid .ev-cell:last-child{border-bottom:none;}
+  }
+
+  /* ---------- PART B -- club-only, no upstream ---------- */
+
+  /* --------------------------------------------------------------
+     MASTHEAD -- .desk-header
+     DIVERGES FROM THE PLATFORM HEADER. The platform's is a 52px seal
+     in a horizontal crimson bar; this one makes the seal the subject.
+     The field is --ink because that is the seal's OWN field colour --
+     the artwork is drawn to sit on black, and a crimson panel would
+     swallow its crimson outer ring (PLATFORM_COMPONENTS.md 3.7 warns
+     against exactly that). Crimson returns as the rule beneath.
+     -------------------------------------------------------------- */
+  .desk-header{display:block;text-align:center;background:var(--ink);color:#fff;
+    padding:46px 32px 0;border-bottom:5px solid var(--crimson);}
+  .desk-header img.seal{display:block;width:280px;height:280px;max-width:72vw;
+    margin:0 auto 24px;background:none;padding:0;border-radius:50%;}
+  .desk-header .desk-name{font-family:var(--head);font-weight:700;font-size:2.6rem;
+    line-height:1.05;letter-spacing:.05em;text-transform:uppercase;color:#fff;}
+  .desk-header .desk-sub{font-size:.8rem;color:rgba(255,255,255,.72);
+    letter-spacing:.14em;text-transform:uppercase;margin-top:10px;}
+
+  /* The detail rail. A thin line along the very bottom of the banner --
+     the facts are there for the reader who needs them, deliberately
+     subordinate to the mark. If a document needs more than four or five
+     items here, it wants .status-strip below the banner instead. */
+  .desk-rail{margin-top:30px;border-top:1px solid rgba(255,255,255,.15);
+    padding:13px 0 14px;display:flex;justify-content:center;align-items:center;
+    flex-wrap:wrap;gap:0 10px;font-size:.78rem;letter-spacing:.07em;
+    text-transform:uppercase;color:rgba(255,255,255,.78);}
+  .desk-rail .r-i{white-space:nowrap;}
+  .desk-rail .r-i.hi{color:var(--gold);font-weight:700;}
+  .desk-rail .r-sep{color:rgba(255,255,255,.3);}
+
+  /* --------------------------------------------------------------
+     CHARTER BAND -- .charter
+     The standing statement of what this club is and who decides.
+     Sits BETWEEN .status-strip and .subject, so it is the first prose
+     in the document -- ahead of the headline, ahead of the links.
+     It is not news, it does not change between documents, and that is
+     the point: a reader meets it every time.
+     Keep it to three or four sentences. A charter band that grows into
+     a paragraph stops being read, which defeats it entirely.
+     -------------------------------------------------------------- */
+  .charter{background:#fbeaea;border-bottom:1px solid var(--line);
+    border-left:5px solid var(--crimson);padding:20px 32px;}
+  .charter .ch-h{font-family:var(--head);font-weight:700;font-size:.72rem;
+    letter-spacing:.09em;text-transform:uppercase;color:var(--crimson);
+    margin:0 0 8px;}
+  .charter p{margin:0 0 8px;font-size:.95rem;color:var(--body);}
+  .charter p:last-child{margin-bottom:0;}
+
+  /* --------------------------------------------------------------
+     ACTION PANEL -- .actions
+     The two or three links a reader must be able to act on before
+     reading anything else. Always the first thing inside .body-wrap.
+     -------------------------------------------------------------- */
+  .actions{border:1px solid var(--line);border-left:4px solid var(--crimson);
+    border-radius:6px;background:#faf8f6;padding:18px 22px;margin:4px 0 22px;}
+  .actions .a-h{font-family:var(--head);font-weight:700;font-size:.72rem;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--crimson);margin:0 0 10px;}
+  .actions .a-btns{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px;}
+  .actions .a-btns .join{margin:0;}
+  .actions p{margin:0 0 8px;font-size:.9rem;}
+  .actions p:last-child{margin-bottom:0;}
+  .actions a:not(.join){color:var(--crimson-deep);font-weight:600;}
+  /* .fine is fine-print PROSE. Do not use .join-url for it -- that class
+     carries word-break:break-all for raw URLs and will hyphenate words. */
+  .actions .fine{font-size:.8rem;color:var(--muted);}
+
+  /* --------------------------------------------------------------
+     LINK BUTTON -- .join, .join.alt
+     One primary action per panel. .alt is the outlined secondary.
+     -------------------------------------------------------------- */
+  .join{display:inline-block;background:var(--crimson);color:#fff;
+    font-family:var(--head);font-weight:700;font-size:.95rem;text-decoration:none;
+    padding:12px 26px;border-radius:6px;margin:4px 0 6px;}
+  .join:hover{background:var(--crimson-deep);}
+  .join.alt{background:#fff;color:var(--crimson);border:2px solid var(--crimson);
+    padding:10px 24px;}
+  .join.alt:hover{background:#fbeaea;}
+  .join-url{font-size:.78rem;color:var(--muted);word-break:break-all;margin:6px 0 0;}
+
+  /* --------------------------------------------------------------
+     CARRIED-RULE REFINEMENT -- .headsup with more than one paragraph
+     The platform's .headsup sets p{margin:0}, which assumes a single
+     paragraph. Club callouts often run to two. This restores the gap
+     without editing the carried rule above.
+     -------------------------------------------------------------- */
+  .headsup p{margin:0 0 10px;}
+  .headsup p:last-child{margin-bottom:0;}
+
+  /* --------------------------------------------------------------
+     BODY LINKS
+     Without this, an inline link renders in browser-default blue in the
+     middle of a crimson document. .join is excluded because it paints
+     itself.
+     -------------------------------------------------------------- */
+  .body-wrap a:not(.join){color:var(--crimson-deep);font-weight:600;
+    text-decoration-thickness:1px;text-underline-offset:2px;}
+  .body-wrap a:not(.join):hover{text-decoration:none;}
+
+  /* --------------------------------------------------------------
+     PLAIN LISTS IN BODY PROSE
+     The platform sheet styles lists only inside .step, which club
+     documents do not use. Declared BEFORE .agenda so that component's
+     own list rules still win.
+     -------------------------------------------------------------- */
+  .body-wrap ul,.body-wrap ol{margin:0 0 16px;padding-left:22px;}
+  .body-wrap li{margin:6px 0;}
+
+  /* --------------------------------------------------------------
+     AGENDA -- .agenda
+     A numbered running order. The number is generated, never typed,
+     so inserting an item never renumbers the rest by hand.
+     -------------------------------------------------------------- */
+  .agenda{list-style:none;margin:0;padding:0;counter-reset:ag;}
+  .agenda li{position:relative;padding:14px 18px 14px 58px;margin:0 0 10px;
+    border:1px solid var(--line);border-left:4px solid var(--crimson);
+    border-radius:6px;background:#fff;counter-increment:ag;}
+  .agenda li::before{content:counter(ag);position:absolute;left:16px;top:14px;
+    width:26px;height:26px;border-radius:50%;background:var(--crimson);color:#fff;
+    font-family:var(--head);font-weight:700;font-size:.85rem;
+    display:flex;align-items:center;justify-content:center;}
+  .agenda .ag-t{font-family:var(--head);font-weight:700;color:var(--ink);
+    font-size:.98rem;display:block;margin-bottom:3px;}
+  .agenda .ag-d{font-size:.9rem;color:var(--body);}
+
+  /* --------------------------------------------------------------
+     MOTION -- .motion
+     A question genuinely open to a vote. The heavy border is the
+     signal: this is not settled. NEVER use it for something already
+     decided -- that is what .orient and .headsup are for.
+     .m-figs is optional and only for a before/after figure pair.
+     -------------------------------------------------------------- */
+  .motion{border:2px solid var(--crimson);border-radius:8px;background:#fff;
+    padding:18px 20px;margin:18px 0;}
+  .motion .m-tag{font-family:var(--head);font-weight:700;font-size:.72rem;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--crimson);margin-bottom:8px;}
+  .motion .m-title{font-family:var(--head);font-weight:700;font-size:1rem;
+    color:var(--ink);margin:0 0 6px;}
+  .motion .m-figs{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:10px 0 12px;}
+  .motion .m-fig{font-family:var(--head);font-weight:700;font-size:1.45rem;color:var(--ink);}
+  .motion .m-fig small{display:block;font-size:.62rem;font-weight:700;letter-spacing:.09em;
+    text-transform:uppercase;color:var(--muted);margin-top:2px;}
+  .motion .m-arrow{font-size:1.2rem;color:var(--crimson);font-weight:700;}
+  .motion p{margin:0 0 10px;font-size:.95rem;}
+  .motion p:last-child{margin-bottom:0;}
+
+  /* --------------------------------------------------------------
+     EVENT -- .event / .evgrid
+     An external event the club attends. The grid is what/when/where
+     at a glance; the prose below it carries the club's position on
+     cost, travel and conflicts.
+     -------------------------------------------------------------- */
+  .event{border:1px solid var(--line);border-top:4px solid var(--crimson);
+    border-radius:8px;background:#fff;padding:20px 22px;margin:18px 0;}
+  .event .ev-kicker{font-family:var(--head);font-weight:700;font-size:.66rem;
+    letter-spacing:.09em;text-transform:uppercase;color:var(--crimson);margin-bottom:6px;}
+  .event .ev-title{font-family:var(--head);font-weight:700;font-size:1.1rem;
+    color:var(--ink);margin:0 0 4px;}
+  .event p{margin:0 0 10px;font-size:.95rem;}
+  .event p:last-child{margin-bottom:0;}
+  .evgrid{display:flex;flex-wrap:wrap;gap:0;margin:14px 0 12px;
+    border:1px solid var(--line);border-radius:6px;overflow:hidden;}
+  .evgrid .ev-cell{flex:1 1 170px;padding:12px 16px;border-right:1px solid var(--line);
+    background:#faf8f6;}
+  .evgrid .ev-cell:last-child{border-right:none;}
+  .evgrid .ev-lab{font-size:.66rem;text-transform:uppercase;letter-spacing:.09em;
+    color:var(--muted);margin-bottom:3px;}
+  .evgrid .ev-val{font-family:var(--head);font-weight:500;font-size:.9rem;
+    color:var(--ink);line-height:1.45;}
+
+  /* --------------------------------------------------------------
+     GOVERNING TEXT -- .toc / .art / .sec
+     For a document that is READ OUT OF ORDER: a constitution, a
+     policy, a set of by-laws. The jump links are legitimate here
+     precisely because the reader arrives looking for one clause and
+     leaves again -- the round-trip case. Never use .toc in a document
+     meant to be read start to finish.
+     -------------------------------------------------------------- */
+  .toc{border:1px solid var(--line);border-radius:8px;background:#faf8f6;
+    padding:18px 22px;margin:18px 0 26px;}
+  .toc .toc-h{font-family:var(--head);font-weight:700;font-size:.72rem;
+    letter-spacing:.09em;text-transform:uppercase;color:var(--crimson);margin:0 0 10px;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:28px;font-size:.92rem;}
+  .toc li{margin:5px 0;break-inside:avoid;}
+  .toc a{color:var(--crimson-deep);font-weight:600;text-decoration:none;}
+  .toc a:hover{text-decoration:underline;}
+
+  .art{border-top:2px solid var(--crimson);padding-top:6px;margin:34px 0 0;}
+  .art > h2{font-family:var(--head);font-weight:700;font-size:1.12rem;
+    color:var(--crimson);margin:12px 0 4px;padding:0;border:none;display:block;}
+  .art > .art-sub{font-size:.8rem;color:var(--muted);margin:0 0 14px;}
+
+  .sec{border-left:3px solid var(--line);padding:2px 0 2px 16px;margin:0 0 16px;}
+  .sec .sec-h{font-family:var(--head);font-weight:700;font-size:.95rem;
+    color:var(--ink);margin:0 0 5px;}
+  .sec p{margin:0 0 9px;font-size:.95rem;}
+  .sec p:last-child,.sec ol:last-child,.sec ul:last-child{margin-bottom:0;}
+  .sec ol,.sec ul{margin:0 0 9px;padding-left:22px;font-size:.95rem;}
+  .sec li{margin:5px 0;}
+
+  /* --------------------------------------------------------------
+     HIERARCHICAL DISCLOSURE -- .cyc nesting and controls
+     .cyc itself is carried from the platform sheet above. What is
+     club-only is the SECOND level (.cyc .cyc) and the expand/collapse
+     controls.
+
+     ⚠ WHY THE CONTROLS ARE NOT OPTIONAL ON A REFERENCE DOCUMENT:
+     browser find-in-page does not search inside a closed <details>.
+     A reader hunting for "quorum" in a collapsed constitution finds
+     nothing and concludes it is not there. "Open everything" is what
+     makes Ctrl+F work, and it is also what makes the page printable.
+     -------------------------------------------------------------- */
+  .cyc .cyc{margin:12px 0;border-radius:8px;}
+  .cyc .cyc > .cyc-sum{padding:11px 16px;border-left-width:4px;background:#fff;}
+  .cyc .cyc > .cyc-sum:hover{background:#faf8f6;}
+  .cyc .cyc .cyc-t{font-size:.95rem;}
+  .cyc .cyc .cyc-k{font-size:.62rem;}
+  .cyc .cyc .cycle-inner{padding:4px 18px 14px;}
+  .cyc[open] > .cyc-sum .cyc-t{color:var(--crimson);}
+
+  .cyc-controls{display:flex;gap:10px;margin:0 0 16px;flex-wrap:wrap;}
+  .cyc-controls button{font-family:var(--head);font-weight:700;font-size:.75rem;
+    padding:8px 15px;border:1px solid var(--line);background:var(--paper);
+    border-radius:6px;cursor:pointer;color:var(--crimson);}
+  .cyc-controls button:hover{background:#fbeaea;border-color:var(--crimson);}
+  .cyc-controls .cc-note{font-size:.78rem;color:var(--muted);align-self:center;}
+
+  /* --------------------------------------------------------------
+     COLLAPSIBLE -- .fold
+     Native <details>/<summary>. No JavaScript, so it survives a
+     Blackboard paste and works with a keyboard and a screen reader
+     for free. Use it for material a reader needs occasionally, not
+     for anything they must not miss -- collapsed content is content
+     most people will never open.
+     -------------------------------------------------------------- */
+  .fold{border:1px solid var(--line);border-left:4px solid var(--crimson);
+    border-radius:6px;background:#faf8f6;margin:18px 0;overflow:hidden;}
+  .fold > summary{cursor:pointer;list-style:none;padding:14px 20px;
+    font-family:var(--head);font-weight:700;font-size:.98rem;color:var(--crimson);
+    display:flex;align-items:center;gap:10px;}
+  .fold > summary::-webkit-details-marker{display:none;}
+  .fold > summary::before{content:"▸";display:inline-block;font-size:.8rem;
+    transition:transform .12s ease;flex:0 0 auto;}
+  .fold[open] > summary::before{transform:rotate(90deg);}
+  .fold > summary:hover{background:#fbeaea;}
+  .fold > summary .f-note{font-family:var(--txt);font-weight:400;font-size:.82rem;
+    color:var(--muted);margin-left:auto;text-align:right;}
+  .fold .fold-body{padding:4px 20px 18px;border-top:1px solid var(--line);}
+  .fold .fold-body > *:first-child{margin-top:12px;}
+  .fold .fold-body > *:last-child{margin-bottom:0;}
+  .fold .fold-body h4{font-family:var(--head);font-weight:700;font-size:.92rem;
+    color:var(--ink);margin:18px 0 6px;}
+  .fold .fold-body p{margin:0 0 10px;font-size:.94rem;}
+  .fold .fold-body ol,.fold .fold-body ul{margin:0 0 12px;padding-left:22px;
+    font-size:.94rem;}
+  .fold .fold-body li{margin:5px 0;}
+
+  /* --------------------------------------------------------------
+     DATE TABLE -- .dates
+     A published schedule. The "no meeting" rows are deliberately NOT
+     hidden: a reader needs to see that a date was considered and
+     ruled out, or they will assume the schedule is incomplete and
+     turn up. The reason column is what stops that question recurring.
+     -------------------------------------------------------------- */
+  .dates{width:100%;border-collapse:collapse;margin:14px 0;font-size:.92rem;}
+  .dates th,.dates td{border:1px solid var(--line);padding:8px 11px;text-align:left;
+    vertical-align:top;}
+  .dates th{background:#faf8f6;font-family:var(--head);font-weight:700;color:var(--ink);
+    font-size:.8rem;letter-spacing:.03em;}
+  .dates td.d-when{font-family:var(--head);font-weight:700;color:var(--ink);
+    white-space:nowrap;}
+  .dates tr.off td{color:var(--muted);background:#faf8f6;}
+  .dates tr.off td.d-when{font-weight:400;text-decoration:line-through;
+    color:var(--muted);}
+  .dates .d-tag-on{font-family:var(--head);font-weight:700;font-size:.68rem;
+    letter-spacing:.06em;text-transform:uppercase;color:var(--crimson);}
+  .dates .d-tag-off{font-family:var(--head);font-weight:700;font-size:.68rem;
+    letter-spacing:.06em;text-transform:uppercase;color:var(--muted);}
+  .dates caption{caption-side:bottom;text-align:left;font-size:.8rem;
+    color:var(--muted);padding-top:8px;}
+  .dates-wrap{overflow-x:auto;}
+
+  /* --------------------------------------------------------------
+     SCHEDULE -- .when-list
+     A short recurring pattern. Not a calendar: if it needs more than
+     about five rows it wants a table, not this.
+     -------------------------------------------------------------- */
+  .when-list{list-style:none;margin:0;padding:0;}
+  .when-list li{padding:9px 0;border-bottom:1px solid var(--line);font-size:.95rem;}
+  .when-list li:last-child{border-bottom:none;}
+  .when-list .wl-d{font-family:var(--head);font-weight:700;color:var(--ink);}
+
+  /* --------------------------------------------------------------
+     PROVENANCE -- .rev  (PLATFORM_COMPONENTS.md 3.5)
+     The <time datetime> element is the point, not decoration.
+     Bump on CONTENT change, never on a rebuild.
+     -------------------------------------------------------------- */
+  .ticket-footer .rev{margin:0;color:var(--muted);font-size:.78rem;}
+  .ticket-footer .rev time{color:var(--ink);font-family:Consolas,'Courier New',monospace;}
+
+  /* --------------------------------------------------------------
+     AMENDMENT HISTORY -- .am-*
+     The record of every proposed constitutional change and what
+     happened to it. Rendered by amendments_data.py into BOTH the
+     constitution reference and the combined kickoff document.
+
+     WHY THE OUTCOME BADGES DIFFER IN WEIGHT: a passed amendment is
+     part of the governing document now, a failed one never took
+     effect, and a pending one is still a proposal. Reading those as
+     the same thing is the mistake this record exists to prevent, so
+     they must not look the same at a glance.
+     -------------------------------------------------------------- */
+  .cyc-badge.am-pass{background:var(--crimson-deep);color:#fff;}
+  .cyc-badge.am-fail{background:transparent;color:var(--muted);
+    border:1px solid var(--line);padding:3px 10px;}
+  .cyc-badge.am-pend{background:var(--gold);color:#3a2a00;}
+
+  /* The procedural facts. Quorum and notice decide whether a vote was
+     valid at all (Article V S3, Article X S2), so they sit above the
+     text rather than in a footnote. */
+  .am-row{display:flex;gap:12px;align-items:baseline;padding:6px 0;
+    border-bottom:1px solid var(--line);font-size:.9rem;}
+  .am-row:last-of-type{border-bottom:none;margin-bottom:10px;}
+  .am-k{font-family:var(--head);font-weight:700;font-size:.68rem;
+    letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+    flex:0 0 88px;}
+  .am-v{color:var(--body);}
+
+  /* Before / after wording. The old text is quoted, the new text is
+     marked -- a reader must never have to guess which is which. */
+  .am-text{border-left:3px solid var(--line);background:#faf8f6;
+    padding:10px 14px;margin:12px 0;border-radius:0 4px 4px 0;}
+  .am-text.am-new{border-left-color:var(--crimson);background:#fdf7f8;}
+  .am-text p{margin:0;font-size:.93rem;}
+  .am-t-h{font-family:var(--head);font-weight:700;font-size:.68rem;
+    letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+    margin-bottom:5px;}
+  .am-text.am-new .am-t-h{color:var(--crimson);}
+
+  /* .fine is scoped to .actions elsewhere; the fold body needs it too. */
+  .fold-body .fine{font-size:.8rem;color:var(--muted);}
+  /* A gap in the record, shown rather than hidden. The club has never minuted
+     to the standard the constitution implies, and an entry that silently omits
+     quorum reads as though quorum was fine. "Not recorded" is the honest
+     answer and must look different from an answer. */
+  .am-gap{color:var(--muted);font-style:italic;}
+
+/* ==========================================================================
+   REMOTE-DELIVERY ADDITIONS
+   Only used by the Blackboard shell. Harmless everywhere else.
+   ========================================================================== */
+
+/* The detail rail travels with the body (it is dated) but lands on paper
+   rather than on the dark masthead. Same information, legible ground. */
+.desk-rail.cc-light{margin:0;border-top:none;
+  border-bottom:1px solid var(--line);background:#faf8f6;
+  padding:12px 20px 13px;color:var(--muted);}
+.desk-rail.cc-light .r-sep{color:var(--line);}
+.desk-rail.cc-light .r-i.hi{color:var(--crimson);}
