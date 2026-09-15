@@ -234,11 +234,17 @@
      A numbered running order. The number is generated, never typed,
      so inserting an item never renumbers the rest by hand.
      -------------------------------------------------------------- */
+  /* ⚠ DIRECT CHILDREN ONLY. These were descendant selectors (.agenda li),
+     which meant any list nested inside an agenda item -- the amendments
+     listed under an item, for instance -- got the numbered card treatment and
+     kept incrementing the counter, so a four-item agenda rendered items
+     numbered 2,3,4,5 with the badge sitting on top of the text. Found in the
+     live page 2026-09-15. Keep the > combinator. */
   .agenda{list-style:none;margin:0;padding:0;counter-reset:ag;}
-  .agenda li{position:relative;padding:14px 18px 14px 58px;margin:0 0 10px;
+  .agenda > li{position:relative;padding:14px 18px 14px 58px;margin:0 0 10px;
     border:1px solid var(--line);border-left:4px solid var(--crimson);
     border-radius:6px;background:#fff;counter-increment:ag;}
-  .agenda li::before{content:counter(ag);position:absolute;left:16px;top:14px;
+  .agenda > li::before{content:counter(ag);position:absolute;left:16px;top:14px;
     width:26px;height:26px;border-radius:50%;background:var(--crimson);color:#fff;
     font-family:var(--head);font-weight:700;font-size:.85rem;
     display:flex;align-items:center;justify-content:center;}
@@ -259,11 +265,16 @@
     letter-spacing:.08em;text-transform:uppercase;color:var(--crimson);margin-bottom:8px;}
   .motion .m-title{font-family:var(--head);font-weight:700;font-size:1rem;
     color:var(--ink);margin:0 0 6px;}
-  .motion .m-figs{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:10px 0 12px;}
-  .motion .m-fig{font-family:var(--head);font-weight:700;font-size:1.45rem;color:var(--ink);}
-  .motion .m-fig small{display:block;font-size:.62rem;font-weight:700;letter-spacing:.09em;
+  /* The before/after figure pair is NOT scoped to .motion. It was, and the
+     moment the same pair rendered inside an agenda item's fold the rules
+     stopped applying -- the figures stacked, and the arrow landed on its own
+     line above an unstyled caption. A figure pair is a figure pair wherever
+     it sits. Found in the live page 2026-09-15. */
+  .m-figs{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:10px 0 12px;}
+  .m-fig{font-family:var(--head);font-weight:700;font-size:1.45rem;color:var(--ink);}
+  .m-fig small{display:block;font-size:.62rem;font-weight:700;letter-spacing:.09em;
     text-transform:uppercase;color:var(--muted);margin-top:2px;}
-  .motion .m-arrow{font-size:1.2rem;color:var(--crimson);font-weight:700;}
+  .m-arrow{font-size:1.2rem;color:var(--crimson);font-weight:700;}
   .motion p{margin:0 0 10px;font-size:.95rem;}
   .motion p:last-child{margin-bottom:0;}
 
@@ -467,6 +478,88 @@
      quorum reads as though quorum was fine. "Not recorded" is the honest
      answer and must look different from an answer. */
   .am-gap{color:var(--muted);font-style:italic;}
+
+  /* --------------------------------------------------------------
+     APPROVED MOTION -- .amot
+     An ordinary motion the members have PASSED, in the running list
+     that grows through the year.
+
+     WHY IT IS NOT .motion: that heavy crimson border means "the club
+     has not settled this". A decision wearing it teaches readers to
+     stop reading the difference, and the difference between an open
+     question and a settled one is the thing these documents exist to
+     keep straight.
+
+     It carries the same .am-row facts as the amendment history --
+     when, on what authority, what it changed -- because a reader
+     asking "does this still stand" is asking the same question of
+     both.
+
+     .amot.am-off is a motion later rescinded or superseded. It STAYS
+     on the page, greyed and struck, because a club that deletes the
+     decisions it reversed forgets that it ever changed its mind, and
+     the next person proposes the same thing again.
+     -------------------------------------------------------------- */
+  .amot{border:1px solid var(--line);border-left:4px solid var(--crimson-deep);
+    border-radius:0 6px 6px 0;background:var(--paper);padding:16px 20px;margin:14px 0;}
+  .amot .amot-h{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;
+    margin-bottom:10px;}
+  .amot .amot-t{font-family:var(--head);font-weight:700;font-size:1rem;color:var(--ink);}
+  .amot .amot-d{font-size:.7rem;font-weight:700;letter-spacing:.07em;
+    text-transform:uppercase;color:var(--muted);}
+  .amot p{margin:0 0 10px;font-size:.95rem;}
+  .amot p:last-child{margin-bottom:0;}
+  .amot.am-off{border-left-color:var(--line);background:#faf8f6;}
+  .amot.am-off .amot-t{color:var(--muted);text-decoration:line-through;}
+
+  /* --------------------------------------------------------------
+     IN-PAGE BUILDER -- .dlog
+     LIFTED from Course_Build_Pipeline PLATFORM_REFERENCE.html
+     (PLATFORM_COMPONENTS.md 3.1), token-swapped maroon -> crimson.
+
+     Fill the fields -> press Build -> get a clean text block -> copy
+     it out. Nothing to download, nothing to upload, no attachment.
+
+     THREE BINDING RULES, inherited and not negotiable:
+       1. Output is plain "Label: value" lines. NEVER aligned columns
+          -- a proportional font destroys alignment on paste.
+       2. Placeholders are INSTRUCTIONS, never examples. An example
+          gets copied through as if it were real.
+       3. Copy uses execCommand('copy') FIRST, then
+          navigator.clipboard, then manual select. The modern API
+          silently fails on file://, which is how these get opened.
+     -------------------------------------------------------------- */
+  .dlog{border:1px solid var(--line);border-left:4px solid var(--crimson);
+    border-radius:8px;background:#faf8f6;padding:18px 22px;margin:18px 0;}
+  .dlog-head{font-family:var(--head);font-weight:700;color:var(--crimson);
+    font-size:1rem;margin-bottom:6px;}
+  .dlog-intro{font-size:.93rem;margin:0 0 14px;}
+  .dlog-q{display:block;font-family:var(--head);font-weight:700;font-size:.9rem;
+    color:var(--ink);margin:15px 0 5px;}
+  .dlog-in{width:100%;font-family:var(--txt);font-size:.95rem;padding:9px 11px;
+    border:1px solid var(--line);border-radius:6px;background:#fff;
+    color:var(--body);box-sizing:border-box;}
+  select.dlog-in{cursor:pointer;}
+  .dlog-btn{font-family:var(--head);font-weight:700;font-size:.85rem;
+    background:var(--crimson);color:#fff;border:none;border-radius:6px;
+    padding:10px 20px;margin:16px 8px 0 0;cursor:pointer;}
+  .dlog-btn:hover{background:var(--crimson-deep);}
+  .dlog-btn-alt{background:#fff;color:var(--crimson);
+    border:1px solid var(--crimson);}
+  .dlog-btn-alt:hover{background:#f2ece8;}
+  .dlog-out{width:100%;margin-top:14px;
+    font-family:'Consolas','SFMono-Regular',Menlo,monospace;font-size:.85rem;
+    line-height:1.6;padding:12px 14px;border:1px solid var(--line);
+    border-radius:6px;background:#fff;color:var(--ink);box-sizing:border-box;}
+  .dlog-note{font-size:.88rem;font-weight:700;margin:9px 0 0;min-height:1.1em;}
+  .dlog-sec{font-family:var(--head);font-weight:700;font-size:.8rem;
+    letter-spacing:.06em;text-transform:uppercase;color:var(--crimson);
+    margin:18px 0 2px;border-bottom:1px solid var(--line);padding-bottom:5px;}
+
+  @media print{
+    .dlog-btn,.dlog-btn-alt{display:none;}
+    .dlog-in,.dlog-out{border:1px solid var(--ink);}
+  }
 
 /* ==========================================================================
    REMOTE-DELIVERY ADDITIONS
