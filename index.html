@@ -225,7 +225,33 @@
   .body-wrap ul,.body-wrap ol{margin:0 0 16px;padding-left:22px;}
   .body-wrap li{margin:6px 0;}
 
-  /* --------------------------------------------------------------
+  /* -----------------------------------------------------------------
+     CLUB NEWS -- .news
+     Things that are simply true now: not an event, not a decision, not a
+     question. Sits at the very top, above the event cards.
+
+     ⚠ DELIBERATELY QUIETER THAN .charter AND .motion. Those two earn their
+     weight -- one carries the club's governance statement, the other means
+     "undecided". News is routine, it appears every week, and a loud treatment
+     would train the reader to ignore the loud treatments that matter. Flat
+     panel, no border-left accent, no colour field.
+     ----------------------------------------------------------------- */
+  .news{background:var(--paper2,#faf8f7);border:1px solid var(--line);
+        border-radius:3px;padding:14px 18px;margin:0 0 20px;}
+  .nw-h{font-family:var(--head);font-weight:700;font-size:.72rem;
+        letter-spacing:.09em;text-transform:uppercase;color:var(--crimson);
+        margin:0 0 10px;}
+  .nw-list{list-style:none;margin:0;padding:0;}
+  .nw-list > li{padding:0 0 12px;margin:0 0 12px;
+                border-bottom:1px solid var(--line);}
+  .nw-list > li:last-child{padding-bottom:0;margin-bottom:0;border-bottom:0;}
+  .nw-d{display:block;font-size:.72rem;letter-spacing:.06em;
+        text-transform:uppercase;color:var(--grey,#6b6b6b);margin:0 0 3px;}
+  .nw-t{display:block;font-family:var(--head);font-weight:700;
+        color:var(--ink);font-size:1rem;line-height:1.3;}
+  .nw-list p{margin:5px 0 0;font-size:.92rem;color:var(--body);}
+
+/* --------------------------------------------------------------
      AGENDA -- .agenda
      A numbered running order. The number is generated, never typed,
      so inserting an item never renumbers the rest by hand.
@@ -571,9 +597,9 @@
     <div class="desk-rail">
       <span class="r-i">Fall 2026</span>
       <span class="r-sep">&middot;</span>
-      <span class="r-i">Next: Thursday 17 September &middot; 6:00 PM</span>
+      <span class="r-i">Next: Thursday 24 September &middot; 12:00 PM</span>
       <span class="r-sep">&middot;</span>
-      <span class="r-i">Stevens Point campus</span>
+      <span class="r-i">Microsoft Teams</span>
       <span class="r-sep">&middot;</span>
       <span class="r-i hi">Open to all students</span>
     </div>
@@ -637,154 +663,31 @@
         browser:<br>https://teams.microsoft.com/meet/258450828244667?p=GQlge21BXSlwYyq9Y6</p>
       </div>
 
-      <details class="cyc" id="ev-activity">
-        <summary class="cyc-sum">
-          <span class="cyc-chev">&#9656;</span>
-          <span class="cyc-k">This Thursday</span>
-          <span class="cyc-t">Activity night &mdash; gaming, digital and analog</span>
-          <span class="cyc-badge">Thursday 17 September &middot; 6:00 PM</span>
-        </summary>
-        <div class="cycle-inner">
-
-          <div class="evgrid">
-            <div class="ev-cell"><div class="ev-lab">When</div><div class="ev-val">Thursday 17 September<br>6:00 PM</div></div>
-            <div class="ev-cell"><div class="ev-lab">Where</div><div class="ev-val">Stevens Point campus<br>Meet by room SP323</div></div>
-            <div class="ev-cell"><div class="ev-lab">Food</div><div class="ev-val">Pizza and drinks<br>Covered by the club</div></div>
-            <div class="ev-cell"><div class="ev-lab">Also on</div><div class="ev-val">Officer nominations<br>All four seats</div></div>
-          </div>
-
-          <p><a class="join" href="https://mstc.campuslabs.com/engage/event/12762807" target="_blank" rel="noopener">RSVP for this one on Engage</a></p>
-          <p class="join-url">If that button does not work, paste this into your browser:<br>https://mstc.campuslabs.com/engage/event/12762807</p>
-
-          <p><strong>Officer nominations open, for all four seats.</strong> President, Vice-President, Secretary and Treasurer are all vacant. Anyone can be nominated, including yourself; a nomination needs a second, and it only counts if the person accepts. <strong>This activity night and the business meeting on 24 September are the two sittings for nominations</strong> &mdash; what happens after that is on the officer item in the agenda below.</p>
-          <p><strong>Bring what you want to play.</strong> Consoles, handhelds, controllers, laptops, board games, card games. The night runs on what people carry through the door &mdash; the club does not own a games library yet, so a night nobody brings anything to is a night of sitting around.</p>
-          <p><strong>Please RSVP &mdash; the button above goes straight to it.</strong> The pizza order is sized from the RSVP count, so an RSVP is the difference between there being enough and there not being. Change it if your plans change; that is what it is for.</p>
-          <p><strong>You do not have to be a member to come.</strong> No dues, no sign-up, and you do not have to be an IT student. Come and see what the club is.</p>
-          <details class="fold">
-            <summary>See all activity nights<span class="f-note">14 scheduled &middot;
-            5 Thursdays the club cannot meet &middot; through May 2027</span></summary>
-            <div class="fold-body">
-
-              <p>Dates marked <strong>no meeting</strong> are shown rather than dropped, so you
-              can see the date was considered and why it is out &mdash; each one is a college
-              closure or falls outside the semester, checked against the
-              <a href="https://www.mstc.edu/academic-calendar" target="_blank"
-              rel="noopener">Mid-State academic calendar</a>. If the college moves a date, this
-              table will not know.</p>
-
-              <div class="dates-wrap">
-                <table class="dates">
-                  <thead><tr><th>Date</th><th>Time</th><th>Notes</th></tr></thead>
-                  <tbody>
-              <tr>
-                <td class="d-when">Thu 17 Sep 2026</td>
-                <td><span class="d-tag-on">6:00 PM</span></td>
-                <td>Fall 2026 activity night</td>
-              </tr>
-              <tr>
-                <td class="d-when">Thu 1 Oct 2026</td>
-                <td><span class="d-tag-on">6:00 PM</span></td>
-                <td>Fall 2026 activity night</td>
-              </tr>
-              <tr>
-                <td class="d-when">Thu 15 Oct 2026</td>
-                <td><span class="d-tag-on">6:00 PM</span></td>
-                <td>Fall 2026 activity night</td>
-              </tr>
-              <tr>
-                <td class="d-when">Thu 29 Oct 2026</td>
-                <td><span class="d-tag-on">6:00 PM</span></td>
-                <td>Fall 2026 activity night</td>
-              </tr>
-              <tr>
-                <td class="d-when">Thu 12 Nov 2026</td>
-                <td><span class="d-tag-on">6:00 PM</span></td>
-                <td>Fall 2026 activity night</td>
-              </tr>
-              <tr class="off">
-                <td class="d-when">Thu 26 Nov 2026</td>
-                <td><span class="d-tag-off">No meeting</span></td>
-                <td>Fall Recess &mdash; college closed Nov 25&ndash;27</td>
-              </tr>
-              <tr>
-                <td class="d-when">Thu 10 Dec 2026</td>
-                <td><span class="d-tag-on">6:00 PM</span></td>
-                <td>Fall 2026 activity night</td>
-              </tr>
-              <tr class="off">
-                <td class="d-when">Thu 24 Dec 2026</td>
-                <td><span class="d-tag-off">No meeting</span></td>
-                <td>Winter Recess &mdash; college closed</td>
-              </tr>
-              <tr class="off">
-                <td class="d-when">Thu 7 Jan 2027</td>
-                <td><span class="d-tag-off">No meeting</span></td>
-                <td>Between semesters &mdash; the semester ended Dec 16 and the next starts Jan 25</td>
-              </tr>
-              <tr class="off">
-                <td class="d-when">Thu 21 Jan 2027</td>
-                <td><span class="d-tag-off">No meeting</span></td>
-                <td>Between semesters &mdash; the semester ended Dec 16 and the next starts Jan 25</td>
-              </tr>
-              <tr>
-                <td class="d-when">Thu 4 Feb 2027</td>
-                <td><span class="d-tag-on">6:00 PM</span></td>
-                <td>Spring 2027 activity night</td>
-              </tr>
-              <tr>
-                <td class="d-when">Thu 18 Feb 2027</td>
-                <td><span class="d-tag-on">6:00 PM</span></td>
-                <td>Spring 2027 activity night</td>
-              </tr>
-              <tr>
-                <td class="d-when">Thu 4 Mar 2027</td>
-                <td><span class="d-tag-on">6:00 PM</span></td>
-                <td>Spring 2027 activity night</td>
-              </tr>
-              <tr>
-                <td class="d-when">Thu 18 Mar 2027</td>
-                <td><span class="d-tag-on">6:00 PM</span></td>
-                <td>Spring 2027 activity night</td>
-              </tr>
-              <tr>
-                <td class="d-when">Thu 1 Apr 2027</td>
-                <td><span class="d-tag-on">6:00 PM</span></td>
-                <td>Spring 2027 activity night</td>
-              </tr>
-              <tr>
-                <td class="d-when">Thu 15 Apr 2027</td>
-                <td><span class="d-tag-on">6:00 PM</span></td>
-                <td>Spring 2027 activity night</td>
-              </tr>
-              <tr>
-                <td class="d-when">Thu 29 Apr 2027</td>
-                <td><span class="d-tag-on">6:00 PM</span></td>
-                <td>Spring 2027 activity night</td>
-              </tr>
-              <tr>
-                <td class="d-when">Thu 13 May 2027</td>
-                <td><span class="d-tag-on">6:00 PM</span></td>
-                <td>Spring 2027 activity night</td>
-              </tr>
-              <tr class="off">
-                <td class="d-when">Thu 27 May 2027</td>
-                <td><span class="d-tag-off">No meeting</span></td>
-                <td>May 19 was the last day of the semester</td>
-              </tr>
-                  </tbody>
-                </table>
-              </div>
-
-            </div>
-          </details>
-
-        </div>
-      </details>
+      <div class="news">
+        <div class="nw-h">Club news</div>
+        <ul class="nw-list">
+          <li>
+            <span class="nw-d">22 September</span>
+            <span class="nw-t">The club&rsquo;s semester funding is in motion &mdash; $1,100</span>
+            <p>The advisor has submitted the application for this semester&rsquo;s <strong>$1,000 club stipend</strong>, and a meeting with the lead club advisor to go through the club handbook has secured the <strong>additional $100</strong>. The $1,000 is applied for rather than banked &mdash; it transfers once the college processes it. <strong>It matters to what the club can decide this term:</strong> the project build, the equipment question and the spring trip are all arguments about money, and this is most of the money.</p>
+          </li>
+          <li>
+            <span class="nw-d">18 September</span>
+            <span class="nw-t">The club is getting its own website</span>
+            <p>Everything on this page will move there, at a proper address you can send to somebody without explaining how to get into Blackboard first. Nothing changes for now &mdash; this page stays where it is until the move is done.</p>
+          </li>
+          <li>
+            <span class="nw-d">10 September</span>
+            <span class="nw-t">Accepted on Engage but still cannot get in? It is not you</span>
+            <p>There is a fault in Engage where people who are accepted into the club do not actually gain access. The club is testing it and writing it up for the college to send to the platform. <strong>If it has happened to you, say so</strong> &mdash; each case makes the report harder to wave away, and it does not affect your membership either way.</p>
+          </li>
+        </ul>
+      </div>
 
       <details class="cyc" id="ev-business">
         <summary class="cyc-sum">
           <span class="cyc-chev">&#9656;</span>
-          <span class="cyc-k">Next business meeting</span>
+          <span class="cyc-k">This Thursday</span>
           <span class="cyc-t">Everything still open goes on the table</span>
           <span class="cyc-badge">Thursday 24 September &middot; 12:00 PM</span>
         </summary>
@@ -793,15 +696,141 @@
           <div class="evgrid">
             <div class="ev-cell"><div class="ev-lab">When</div><div class="ev-val">Thursday 24 September<br>12:00 PM</div></div>
             <div class="ev-cell"><div class="ev-lab">Where</div><div class="ev-val">Microsoft Teams<br>Link at the top of this page</div></div>
-            <div class="ev-cell"><div class="ev-lab">On the table</div><div class="ev-val">Everything the club<br>has not decided</div></div>
+            <div class="ev-cell"><div class="ev-lab">Also on</div><div class="ev-val">Nominations close<br>and voting opens</div></div>
+            <div class="ev-cell"><div class="ev-lab">Bring</div><div class="ev-val">Your sign-up form<br>and your dues</div></div>
           </div>
 
-          <p><strong>Every open question the club has is on this agenda</strong> &mdash; the running order below is all of them. Some are decided at this meeting and some are only discussed; each item says which.</p>
-          <p><strong>Read the constitution before you come.</strong> The link is at the top of this page, and a proposal people have already read gets a fairer hearing than one heard for the first time in the room. Each item below opens to the detail behind it.</p>
+          <p><strong>Every open question the club has is on this agenda</strong> &mdash; the running order below is all of them, in the order they will be taken. <strong>The first two are the ones that need you to do something:</strong> nominations, and getting signed up with your dues paid.</p>
+          <p class="oh">Has to be settled today</p>
           <ol class="agenda">
             <li>
+              <span class="ag-t">Filling the officer seats</span>
+              <span class="ag-d"><strong>Taken first &mdash; the floor opens now, stays open all meeting, and closes at the end.</strong> Take nominations &mdash; this is the second and last sitting for them. Three offices have a nominee; <strong>Vice-President has none</strong>, and a seat nobody stands for is not on the ballot at all.</span>
+              <details class="fold">
+                <summary>What this is about<span class="f-note">Simple majority &middot; nominations close 24 September &middot; ballot in Engage 24 September to 1 October</span></summary>
+                <div class="fold-body">
+                  <p><strong>Nominated so far:</strong> Trinnan Kube-Smith for President, Blue for Secretary, Jacob Hoppman for Treasurer. <strong>Vice-President has nobody.</strong></p>
+                  <p><strong>Those seats are not taken, and the club wants more names on all of them.</strong> A second nomination is not a challenge to the first &mdash; it is the difference between an election and a formality. If every seat has one name on it, nobody gets to choose anything. <strong>Nominate yourself, or nominate somebody and tell them you did.</strong></p>
+                  <p><strong>You do not need experience, and nobody standing has any.</strong> Every seat is empty this year, so there is no incumbent to be better than. President runs the meetings; Vice-President covers and keeps projects moving; Secretary keeps the minutes, records and roster; Treasurer looks after the money and runs a fundraiser. It is real experience, it is on your transcript, and <strong>if you lose you have lost nothing</strong> &mdash; you are still a member, and there is more work than there are officers.</p>
+                  <p><strong>The timetable.</strong> Nominations close at the end of this meeting. The ballot opens in Engage the same day and closes 1 October, with results announced at the activity night that evening &mdash; item four on this agenda. It runs in Engage so that somebody who cannot make a Thursday still gets a vote.</p>
+                  <p><strong>Only paid members vote, and it is not too late to become one</strong> &mdash; that is the next item. Dues paid is also what lets a nominee stand. <strong>What &ldquo;good standing&rdquo; means is itself being decided at this meeting</strong>, further down this agenda.</p>
+                </div>
+              </details>
+            </li>
+            <li>
+              <span class="ag-t">Sign-up forms and dues &mdash; get them in</span>
+              <span class="ag-d"><strong>Forms and dues collected at this meeting.</strong> Collect sign-up forms and dues. <strong>Nothing else the club does this year works without this</strong> &mdash; not the election, not the project, not the raffle.</span>
+              <details class="fold">
+                <summary>What this is about<span class="f-note">Nothing to vote on &mdash; this is the club asking you to do a thing, and it gates everything else</span></summary>
+                <div class="fold-body">
+                  <p><strong>Print the sign-up form, fill it in, and bring it with your dues.</strong> It takes about two minutes and it is the single thing holding the rest of the club up. The form is linked on this page and is also posted in the General channel in Teams.</p>
+                  <p><strong>Dues are $10.00</strong>, the figure the amendment on this agenda would set, rather than the $5.00 currently written in the constitution. <strong>If that amendment does not pass, everyone who paid $10.00 gets $5.00 back automatically, without having to ask.</strong> Collecting at the higher figure means nobody is asked for more money later.</p>
+                  <p><strong>Paying is what gets you a vote in the officer election</strong>, and the roll stays open for the whole voting window &mdash; join any time before the ballot closes on 1 October and you still get a say. You do not have to have been a member today.</p>
+                  <p><strong>It is also what the club counts by.</strong> Quorum, and the threshold for changing the constitution, are both worked out from the number of paid members. A club with a handful of paid members is a club where a handful of people decide everything, which is not the same thing as a club that agreed something.</p>
+                  <p><strong>And the money is not abstract.</strong> Pizza at activity nights, the club project build, whatever the club decides to buy &mdash; it comes out of a fund that dues feed.</p>
+                </div>
+              </details>
+            </li>
+            <li>
+              <span class="ag-t">A fall raffle &mdash; the fundraiser for the club project</span>
+              <span class="ag-d"><strong>Taken early on purpose &mdash; the college&rsquo;s lead time is the one deadline the club does not control.</strong> Agree to run a raffle to fund the club project, and start on the prize. <strong>Aim it at Christmas</strong> &mdash; something somebody would be glad to give away sells to far more people than something only an IT student wants.</span>
+              <details class="fold">
+                <summary>What this is about<span class="f-note">Member vote under Article VII &sect;1, then a request to the college</span></summary>
+                <div class="fold-body">
+                  <p><strong>The plan is a raffle late this term to pay for the club project build</strong> &mdash; the drawing in November or December, with four weeks of selling before it. It is the club&rsquo;s best shot at real money this semester, and it is the fundraiser everything else is waiting on.</p>
+                  <p><strong>The club does not deal with the state.</strong> It puts a request in to the college and the college handles the licensing. That takes the hard parts off the club entirely &mdash; but it means the club is asking somebody else to put their name to this, so the request wants to arrive as a plan rather than as an idea.</p>
+                  <p><strong>Tickets are sold in advance, over at least four weeks.</strong> That is not up for discussion and it is the one thing the request must say: selling only on the night of the drawing would limit the whole fundraiser to the people standing in one room, which is not a fundraiser.</p>
+                  <p><strong>What this meeting needs to produce is small and rough:</strong> roughly what the prize is, roughly when the drawing happens, and <strong>one person to own it</strong> and be the contact with the All Clubs Advisor. Ticket price and the details can follow. <strong>Ask the advisor how much lead time he needs and work backwards from that</strong> &mdash; the drawing date is not what governs this, his deadline is.</p>
+                  <p><strong>Aim the prize at Christmas.</strong> If the drawing lands in late November or December, the people buying tickets are the same people already trying to work out what to get a parent, a partner or a brother. <strong>A prize somebody would be pleased to give away sells to far more people than a prize only an IT student wants</strong> &mdash; and that matters, because the club has to sell outside its own membership for this to raise anything. It also settles the date: the drawing wants to be before people have finished their shopping, not after.</p>
+                  <p><strong>Ask whether the prize can be donated before asking what to buy.</strong> A prize the club pays for comes out of the money the raffle is supposed to raise. A donated one means almost everything taken in is profit. Local businesses, and the college&rsquo;s own contacts, are worth asking before the club spends anything.</p>
+                  <p><strong>And decide whether it is one prize or a few.</strong> Several smaller prizes usually sell better than one large one, because the odds feel real &mdash; which is worth weighing against the pull of a single thing everybody wants.</p>
+                  <p><strong>One thing to settle while everyone is in the room:</strong> when fundraising first came up the idea was to raffle a machine the club builds. The project now on the table is a machine the club builds <em>and keeps</em>, paid for by this raffle. Those cannot be the same machine.</p>
+                </div>
+              </details>
+            </li>
+            <li>
+              <span class="ag-t">What actually happens at the next activity night</span>
+              <span class="ag-d"><strong>Two minutes and a show of hands &mdash; or agreed outside the meeting if the clock beats it.</strong> Decide what the 1 October activity night actually is. <strong>The gaming night on 17 September had no gaming</strong> &mdash; nobody brought a system. Pick something that does not depend on people remembering.</span>
+              <details class="fold">
+                <summary>What this is about<span class="f-note">Simple majority, or general agreement &mdash; it costs nothing</span></summary>
+                <div class="fold-body">
+                  <p><strong>Thursday 1 October, 6:00 PM, Stevens Point campus</strong> &mdash; meet by room SP323. Pizza and drinks are covered by the club, and <strong>you do not have to be a member to come</strong>. <strong>The officer election results are announced that evening</strong>, which is its own reason to be there.</p>
+                  <p><strong>The first activity night was billed as a gaming night and no gaming happened, because nobody brought a console.</strong> That is worth saying plainly rather than quietly not repeating. The night was built on the assumption that people would carry equipment in, and on the evidence of one night, that assumption does not hold.</p>
+                  <p><strong>Worth knowing why before fixing it.</strong> People not owning a console, not wanting to haul one across town, not being sure the night was really happening, and simply forgetting are four different problems with four different answers. Ask the room &mdash; the people who were there know.</p>
+                  <p><strong>The cheap fix is to stop relying on memory.</strong> If the RSVP asks what you are bringing, the club knows on the Tuesday whether there is anything to play on, instead of finding out at six o&rsquo;clock. Two or three people saying yes in advance is the difference.</p>
+                  <p><strong>Things that do not depend on anyone bringing hardware:</strong> board games and card games, which cost very little and scale to far more people than four controllers do; LAN games on the laptops people already carry; a build or teardown night on whatever hardware the college has finished with; a capture-the-flag or lock-picking night. <strong>The club project build is itself an activity night</strong> &mdash; several of them &mdash; if the club adopts it.</p>
+                  <p><strong>Whether the club buys equipment is a separate and much bigger question</strong>, and it is not settled at this meeting. It has its own item below.</p>
+                </div>
+              </details>
+            </li>
+          </ol>
+          <details class="cyc" id="ag-later">
+            <summary>
+              <span class="cyc-k">8 October</span>
+              <span class="cyc-t">After membership and officers are finished</span>
+              <span class="cyc-badge">8 items</span>
+            </summary>
+            <div class="cycle-inner">
+            <p><strong>None of this is dropped, and none of it is postponed for lack of interest. It is waiting for a club that can properly decide it.</strong> <strong>The four changes to the constitution are now voted on 8 October</strong> rather than today &mdash; amending a constitution on a two-thirds threshold with a handful of paid members binds everyone who joins later on the say-so of almost nobody, and a fortnight fixes that. The spending items need officers who can ratify them under Article VII &sect;1, and there are none until the election finishes.</p>
+            <p><strong>They are here so you meet them before you have to vote on them.</strong> Each one opens to the clause as it reads now and exactly how it would read if it passes. A proposal people have read gets a fairer hearing than one heard for the first time in the room.</p>
+          <ol class="agenda" style="counter-reset:ag 4">
+            <li>
+              <span class="ag-t">What does the two-thirds amendment threshold count?</span>
+              <span class="ag-d"><strong>Settled on 8 October, before the first amendment is put.</strong> Settle what the two-thirds threshold counts &mdash; the whole paid roster, or the members voting. <strong>This has to be taken before the four amendments, not after.</strong></span>
+              <details class="fold">
+                <summary>What this is about<span class="f-note">Procedural ruling by the chair, or a simple-majority vote of the meeting &middot; taken BEFORE the amendments</span></summary>
+                <div class="fold-body">
+                  <p><strong>Article X &sect;1 says amendments need “a two-thirds majority vote of the club membership”.</strong> It does not say “of members present” or “of votes cast”. Read literally, that is two-thirds of every paid member whether they turn up or not. Most clubs mean two-thirds of those voting. The constitution does not say which, and the club has never picked one.</p>
+                  <p><strong>It has never mattered before and it matters on the 24th</strong>, because four amendments are voted that day. A threshold nobody agreed on in advance is the kind of thing that gets challenged months later, by which point the club has been acting on the result.</p>
+                  <p><strong>The literal reading has a consequence worth seeing before you pick it: every paid member who does not attend counts as a no.</strong> With 20 paid members, 14 would have to be in the room and vote yes for an amendment to pass &mdash; a turnout the club has never had. With a small roster it is easy; the more successful the club is at signing people up before a vote, the harder its own constitution becomes to amend. That is very likely not what was intended when it was written.</p>
+                  <p><strong>The other reading &mdash; two-thirds of those voting &mdash; is ordinary club practice and is what Robert&rsquo;s Rules assumes.</strong> It keeps the bar meaningfully higher than a simple majority without making absence a vote.</p>
+                  <p><strong>Whichever the club picks, say it out loud and record it before the first amendment is put</strong>, and count the vote rather than judging it by ear. A proportion cannot be judged from a voice vote, which is a separate known problem with the same fix.</p>
+                </div>
+              </details>
+            </li>
+            <li>
+              <span class="ag-t">Article III, Sections 3, 4 and 5 &mdash; Let anyone present nominate, and fix the election sequence</span>
+              <span class="ag-d"><strong>Discussion &mdash; not settled here.</strong> Anyone present may nominate; the election follows a nomination window.</span>
+              <details class="fold">
+                <summary>What this is about<span class="f-note">Two-thirds majority (Article X &sect;1) &middot; <strong>notice not yet given</strong></span></summary>
+                <div class="fold-body">
+                  <p><strong>The problem.</strong> <strong>As written, the club cannot seat officers in a fall semester.</strong> Section 3 requires a nomination to come from a paid member in good standing and to be seconded by another. Section 4 puts the election at the first meeting of the year. At that meeting, dues have not been collected &mdash; so there is nobody who can nominate, nobody who can second, and no way to elect the officers the club needs in order to function. The two clauses only work in a year the club does not have to start from scratch. Section 4 also names <em>the same meeting twice</em>, so the two-step election it describes does nothing.</p>
+                  <p><strong>Proposed.</strong> <strong>Separate nominating from standing for office.</strong> Anyone attending a meeting or an activity night may nominate and second &mdash; it costs nothing and it is what unblocks the first semester. <strong>Dues and eligibility are tested on the nominee, at the election</strong>, which is where they actually matter, because officers hold the club's records and money. Nominations open across the <strong>first two gatherings of the year</strong>, of either kind, and the election is held at the first business meeting after they close. A seat nobody stands for reopens and is filled later by the same process. Officer terms begin on election.</p>
+                  <div class="am-text">
+                    <div class="am-t-h">As it reads now</div>
+                    <p><strong>Section 3 &middot; Nomination.</strong> Nominations can be made by any paid member in good standing with the club and must be seconded by another paid member who is also in good standing. A nominated member who does not wish to serve as an officer may decline the nomination.<br><br><strong>Section 4 &middot; Election.</strong> Club elections will be conducted by the following format: 1. The President and Vice-President shall be elected on the first official club meeting of the academic year. 2. The Secretary and Treasurer shall be elected at the first official club meeting of the academic year. 3. In the event of a tie, another simple majority shall be held, or a candidate may choose to relinquish the vote.<br><br><strong>Section 5 &middot; Term.</strong> Officers shall serve for one year. The term for all officers shall begin once they have been elected during the first official club meeting of the fall semester.</p>
+                  </div>
+                  <div class="am-text am-new">
+                    <div class="am-t-h">As proposed</div>
+                    <p><strong>Section 3 &middot; Nomination.</strong> Any person attending a club business meeting or club activity may nominate a person for an office, and any other person present may second the nomination. A nominee may decline the nomination. <strong>To stand for election, a nominee must be a member in good standing at the time of the election</strong> and must meet the eligibility requirements of Section 2.<br><br><strong>Section 4 &middot; Election.</strong> Club elections shall be conducted as follows: 1. Nominations for all offices open at the first club gathering of the academic year &mdash; a business meeting or an activity night &mdash; and remain open through the second. 2. The election is held at the first business meeting after nominations close, and each office is decided by a simple majority of the members voting. 3. If an office receives no nomination, or no nominee accepts, nominations for that office reopen and it is filled at a later meeting by the same process. 4. In the event of a tie, another simple majority vote shall be held, or a candidate may choose to relinquish the vote.<br><br><strong>Section 5 &middot; Term.</strong> Officers shall serve for one year. The term for all officers begins on election.</p>
+                  </div>
+                  <p class="fine">The procedural record for this one &mdash; when notice went out, how it was voted, and the reasoning behind it &mdash; is in the <a href="#amendments">amendment history</a>.</p>
+                </div>
+              </details>
+            </li>
+            <li>
+              <span class="ag-t">Article II (new section) &mdash; Define what “in good standing” means</span>
+              <span class="ag-d"><strong>Discussion &mdash; not settled here.</strong> Define the term, with the academic part on self-disclosure.</span>
+              <details class="fold">
+                <summary>What this is about<span class="f-note">Two-thirds majority (Article X &sect;1) &middot; notice given 2026-09-07</span></summary>
+                <div class="fold-body">
+                  <p><strong>The problem.</strong> Article III §3 requires a nomination to come from a “paid member in good standing”, but the constitution never says what good standing is. In practice it has meant three things: <strong>dues are paid for the current semester, the member actually comes to meetings and gatherings, and the member is not failing a class or carrying a GPA below 2.0.</strong> The attendance part is what the phrase is really for &mdash; it is the reason a student who does not come to meetings does not get club money toward a large event such as CypherCon. Writing it down makes the standard the same for everyone instead of a matter of who remembers what.</p>
+                  <p><strong>Proposed.</strong> Add a new section defining the term: dues paid for the semester, attendance at club meetings, and not failing a course or carrying a GPA below 2.0, keeping the advisor discretion Article VII &sect;2 already allows. <strong>Losing good standing would not lose you your membership</strong> &mdash; only standing for office and club funding, and only until it is regained. The academic part runs on self-disclosure: a member failing a course is expected to tell the advisor, who may confirm it where able and may use the discretion Article VII &sect;2 already provides. <strong>One thing still has to be settled before it can be voted: the attendance number.</strong></p>
+                  <div class="am-text">
+                    <div class="am-t-h">As it reads now</div>
+                    <p>Not in the constitution. The phrase is used in Article III §3 and relied on for event funding, but never defined anywhere. The 2.0 requirement exists separately in Article III §2 (officers) and Article VII §2 (event participation) without ever being called “good standing”.</p>
+                  </div>
+                  <div class="am-text am-new">
+                    <div class="am-t-h">As proposed</div>
+                    <p>DRAFT &mdash; not yet proposed. “A member is in good standing when: (1) dues for the current semester are paid; (2) the member has attended at least [NUMBER] of the club meetings held during that semester; and (3) the member is not failing a course and maintains a grade point average of at least 2.0. <strong>A member who is failing a course is expected to raise it with the club advisor</strong>, who may confirm a member’s academic standing where able to do so, and who may exercise the discretion provided in Article VII §2. The club does not inspect academic records and keeps none. Good standing is required to stand for election as an officer under Article III §3, and to receive club funds toward attendance at a large event under Article VII §3. <strong>Good standing is assessed within a single semester and resets at the start of each new one.</strong> A member who is not in good standing in one semester begins the next in good standing, with no carry-over. <strong>A member who is not in good standing remains a member.</strong> They are welcome at meetings and club activities and are counted as members; good standing affects only standing for office and club funding, and only until it is regained.”</p>
+                  </div>
+                  <p class="fine">The procedural record for this one &mdash; when notice went out, how it was voted, and the reasoning behind it &mdash; is in the <a href="#amendments">amendment history</a>.</p>
+                </div>
+              </details>
+            </li>
+            <li>
               <span class="ag-t">Article II, Section 2 &mdash; Raise dues from $5.00 to $10.00 per semester</span>
-              <span class="ag-d"><strong>Decided at this meeting.</strong> Replace $5.00 with $10.00 per semester.</span>
+              <span class="ag-d"><strong>Discussion &mdash; not settled here.</strong> Replace $5.00 with $10.00 per semester.</span>
               <details class="fold">
                 <summary>What this is about<span class="f-note">Two-thirds majority (Article X &sect;1) &middot; notice given 2026-09-07</span></summary>
                 <div class="fold-body">
@@ -826,7 +855,7 @@
             </li>
             <li>
               <span class="ag-t">Article VII, Section 1 &mdash; Correct the article reference for officers</span>
-              <span class="ag-d"><strong>Decided at this meeting.</strong> Change one numeral: “Article II” becomes “Article III”.</span>
+              <span class="ag-d"><strong>Discussion &mdash; not settled here.</strong> Change one numeral: “Article II” becomes “Article III”.</span>
               <details class="fold">
                 <summary>What this is about<span class="f-note">Two-thirds majority (Article X &sect;1) &middot; notice given 2026-09-07</span></summary>
                 <div class="fold-body">
@@ -845,57 +874,31 @@
               </details>
             </li>
             <li>
-              <span class="ag-t">Article III, Sections 3, 4 and 5 &mdash; Let anyone present nominate, and fix the election sequence</span>
-              <span class="ag-d"><strong>Decided at this meeting.</strong> Anyone present may nominate; the election follows a nomination window.</span>
+              <span class="ag-t">A club project for the year &mdash; the Frankenstein build</span>
+              <span class="ag-d"><strong>Discussion &mdash; not settled here.</strong> Pick up the club project idea &mdash; build a machine out of donated and scavenged parts and turn it into a retro gaming console. Raised at an activity night; nothing decided.</span>
               <details class="fold">
-                <summary>What this is about<span class="f-note">Two-thirds majority (Article X &sect;1) &middot; <strong>notice not yet given</strong></span></summary>
+                <summary>What this is about<span class="f-note">Member vote if it needs club money; otherwise just people doing it</span></summary>
                 <div class="fold-body">
-                  <p><strong>The problem.</strong> <strong>As written, the club cannot seat officers in a fall semester.</strong> Section 3 requires a nomination to come from a paid member in good standing and to be seconded by another. Section 4 puts the election at the first meeting of the year. At that meeting, dues have not been collected &mdash; so there is nobody who can nominate, nobody who can second, and no way to elect the officers the club needs in order to function. The two clauses only work in a year the club does not have to start from scratch. Section 4 also names <em>the same meeting twice</em>, so the two-step election it describes does nothing.</p>
-                  <p><strong>Proposed.</strong> <strong>Separate nominating from standing for office.</strong> Anyone attending a meeting or an activity night may nominate and second &mdash; it costs nothing and it is what unblocks the first semester. <strong>Dues and eligibility are tested on the nominee, at the election</strong>, which is where they actually matter, because officers hold the club's records and money. Nominations open across the <strong>first two gatherings of the year</strong>, of either kind, and the election is held at the first business meeting after they close. A seat nobody stands for reopens and is filled later by the same process. Officer terms begin on election.</p>
-                  <div class="am-text">
-                    <div class="am-t-h">As it reads now</div>
-                    <p><strong>Section 3 &middot; Nomination.</strong> Nominations can be made by any paid member in good standing with the club and must be seconded by another paid member who is also in good standing. A nominated member who does not wish to serve as an officer may decline the nomination.<br><br><strong>Section 4 &middot; Election.</strong> Club elections will be conducted by the following format: 1. The President and Vice-President shall be elected on the first official club meeting of the academic year. 2. The Secretary and Treasurer shall be elected at the first official club meeting of the academic year. 3. In the event of a tie, another simple majority shall be held, or a candidate may choose to relinquish the vote.<br><br><strong>Section 5 &middot; Term.</strong> Officers shall serve for one year. The term for all officers shall begin once they have been elected during the first official club meeting of the fall semester.</p>
-                  </div>
-                  <div class="am-text am-new">
-                    <div class="am-t-h">As proposed</div>
-                    <p><strong>Section 3 &middot; Nomination.</strong> Any person attending a club business meeting or club activity may nominate a person for an office, and any other person present may second the nomination. A nominee may decline the nomination. <strong>To stand for election, a nominee must be a member in good standing at the time of the election</strong> and must meet the eligibility requirements of Section 2.<br><br><strong>Section 4 &middot; Election.</strong> Club elections shall be conducted as follows: 1. Nominations for all offices open at the first club gathering of the academic year &mdash; a business meeting or an activity night &mdash; and remain open through the second. 2. The election is held at the first business meeting after nominations close, and each office is decided by a simple majority of the members voting. 3. If an office receives no nomination, or no nominee accepts, nominations for that office reopen and it is filled at a later meeting by the same process. 4. In the event of a tie, another simple majority vote shall be held, or a candidate may choose to relinquish the vote.<br><br><strong>Section 5 &middot; Term.</strong> Officers shall serve for one year. The term for all officers begins on election.</p>
-                  </div>
-                  <p class="fine">The procedural record for this one &mdash; when notice went out, how it was voted, and the reasoning behind it &mdash; is in the <a href="#amendments">amendment history</a>.</p>
+                  <p><strong>The idea: collect parts the club can get hold of &mdash; donated, decommissioned, scavenged &mdash; and build one working machine out of them, set up as a retro gaming console.</strong> It came out of a brainstorm at an activity night. Nothing has been proposed or voted.</p>
+                  <p><strong>It answers three things the club has already raised, which is what makes it worth a proper discussion rather than a shrug.</strong> Activity nights currently run on whatever people carry through the door, because the club owns no games library &mdash; a machine the club owns turns up to every one of them. The spring trip discussion has “spend it on equipment the club keeps” as a live alternative to CypherCon, and this is what that would look like. And a club-built machine was raised as a raffle prize when fundraising came up.</p>
+                  <p><strong>It is also a build with something to learn in it</strong> &mdash; parts compatibility, power budgeting, thermals, imaging, diagnosing a machine assembled from things of unknown history. A project that produces something the club uses beats a project that produces a report.</p>
+                  <p><strong>What the meeting actually has to settle is small:</strong> whether this is the club project for the year, who is chasing parts and from where, where the machine lives between activity nights, and whether it needs any club money at all &mdash; it may need none, which would make this a much easier decision than the spring trip.</p>
                 </div>
               </details>
             </li>
             <li>
-              <span class="ag-t">Article II (new section) &mdash; Define what “in good standing” means</span>
-              <span class="ag-d"><strong>Decided at this meeting.</strong> Define the term, with the academic part on self-disclosure.</span>
+              <span class="ag-t">Should the club buy equipment of its own?</span>
+              <span class="ag-d"><strong>Discussion &mdash; not settled here.</strong> Open the discussion on buying club equipment &mdash; a console and controllers has been raised at around $600. <strong>Not decided at this meeting</strong>, and the reasons why are worth hearing.</span>
               <details class="fold">
-                <summary>What this is about<span class="f-note">Two-thirds majority (Article X &sect;1) &middot; notice given 2026-09-07</span></summary>
+                <summary>What this is about<span class="f-note">Member vote plus officer and advisor ratification (Article VII &sect;1)</span></summary>
                 <div class="fold-body">
-                  <p><strong>The problem.</strong> Article III §3 requires a nomination to come from a “paid member in good standing”, but the constitution never says what good standing is. In practice it has meant three things: <strong>dues are paid for the current semester, the member actually comes to meetings and gatherings, and the member is not failing a class or carrying a GPA below 2.0.</strong> The attendance part is what the phrase is really for &mdash; it is the reason a student who does not come to meetings does not get club money toward a large event such as CypherCon. Writing it down makes the standard the same for everyone instead of a matter of who remembers what.</p>
-                  <p><strong>Proposed.</strong> Add a new section defining the term: dues paid for the semester, attendance at club meetings, and not failing a course or carrying a GPA below 2.0, keeping the advisor discretion Article VII &sect;2 already allows. <strong>Losing good standing would not lose you your membership</strong> &mdash; only standing for office and club funding, and only until it is regained. The academic part runs on self-disclosure: a member failing a course is expected to tell the advisor, who may confirm it where able and may use the discretion Article VII &sect;2 already provides. <strong>One thing still has to be settled before it can be voted: the attendance number.</strong></p>
-                  <div class="am-text">
-                    <div class="am-t-h">As it reads now</div>
-                    <p>Not in the constitution. The phrase is used in Article III §3 and relied on for event funding, but never defined anywhere. The 2.0 requirement exists separately in Article III §2 (officers) and Article VII §2 (event participation) without ever being called “good standing”.</p>
-                  </div>
-                  <div class="am-text am-new">
-                    <div class="am-t-h">As proposed</div>
-                    <p>DRAFT &mdash; not yet proposed. “A member is in good standing when: (1) dues for the current semester are paid; (2) the member has attended at least [NUMBER] of the club meetings held during that semester; and (3) the member is not failing a course and maintains a grade point average of at least 2.0. <strong>A member who is failing a course is expected to raise it with the club advisor</strong>, who may confirm a member’s academic standing where able to do so, and who may exercise the discretion provided in Article VII §2. The club does not inspect academic records and keeps none. Good standing is required to stand for election as an officer under Article III §3, and to receive club funds toward attendance at a large event under Article VII §3. <strong>Good standing is assessed within a single semester and resets at the start of each new one.</strong> A member who is not in good standing in one semester begins the next in good standing, with no carry-over. <strong>A member who is not in good standing remains a member.</strong> They are welcome at meetings and club activities and are counted as members; good standing affects only standing for office and club funding, and only until it is regained.”</p>
-                  </div>
-                  <p class="fine">The procedural record for this one &mdash; when notice went out, how it was voted, and the reasoning behind it &mdash; is in the <a href="#amendments">amendment history</a>.</p>
-                </div>
-              </details>
-            </li>
-            <li>
-              <span class="ag-t">Every officer seat is vacant</span>
-              <span class="ag-d"><strong>Nominations close at this meeting &mdash; the vote follows in Engage.</strong> Take nominations for all four offices &mdash; this is the second and last sitting for them. Nominations close at the end of this meeting.</span>
-              <details class="fold">
-                <summary>What this is about<span class="f-note">Simple majority &middot; nominations 17 and 24 September, then a ballot in Engage</span></summary>
-                <div class="fold-body">
-                  <p><strong>President, Vice-President, Secretary and Treasurer are all open.</strong> Nominations were never reached at the first meeting, so the whole slate is still to be filled.</p>
-                  <p><strong>Nominations are taken at two gatherings: the activity night on 17 September and the business meeting on 24 September.</strong> You can nominate someone, or yourself, at either &mdash; and a nomination only counts once the person accepts it.</p>
-                  <p><strong>Once nominations close, any office that has a nominee goes to an election in Engage.</strong> The ballot is held there rather than in the room so that a member who cannot make a Thursday still gets a vote. <strong>An office with no nominee is not voted on</strong> &mdash; it stays open, and nominations for it are taken up again at a later meeting.</p>
-                  <p><strong>To vote in the election you must be a member in good standing with your dues paid.</strong> That has a practical consequence worth knowing before the 24th: dues are not being collected until the figure is settled at that meeting, so <strong>the members who can vote are the ones who join and pay at or around it</strong>. If you want a say in who runs the club this year, that is the meeting to bring your dues to.</p>
-                  <p><strong>What “good standing” requires is itself being decided on the 24th</strong> &mdash; it is the fourth amendment on this agenda. The constitution uses the phrase today without ever defining it, so if that amendment does not pass, the club is back to dues paid plus its long-standing practice, and the same question comes round again.</p>
-                  <p><strong>This is not a formality.</strong> The Secretary keeps the minutes and the roster, the Treasurer keeps the club's record of what money was authorized, and until the seats are filled the club is running on the advisor doing both, which is not what the constitution says should happen.</p>
+                  <p><strong>The proposal on the table is a console, extra controllers and a couple of games, at roughly $600</strong>, so that an activity night has something to play on without depending on what people carry in. It is a real answer to a real problem.</p>
+                  <p><strong>Three reasons it is discussed now and voted on 8 October rather than today.</strong></p>
+                  <p><strong>One: nobody has stated what the club actually has.</strong> The last statement on file is from 31 May and showed about $2,450, against a year that spent slightly more than it took in. <strong>That figure is four months old.</strong> Since then dues have started coming in, the <strong>$100 stipend</strong> has been secured and the <strong>$1,000 semester stipend</strong> has been applied for but not yet transferred &mdash; so the number is moving, and a $600 purchase is either a quarter of the club&rsquo;s money or a sixth of it depending on whether that $1,000 lands. <strong>Article VII &sect;1 votes are supposed to be taken with the balance stated</strong>, and waiting a fortnight means voting against a real figure instead of a guess. Members can pull the current one themselves from Engage &mdash; Documents, Club Balances.</p>
+                  <p><strong>Two: there are no officers until 1 October.</strong> Article VII &sect;1 requires spending to be ratified by the officers and the advisor, and there are none to ratify it. The club already has one motion sitting in that gap. Adding a $600 purchase to it is worse than waiting a fortnight.</p>
+                  <p><strong>Three: the club has three overlapping answers to the same question and should pick between them, not fund all three by accident.</strong> Buying a console, building a machine from donated parts, and spending the spring-trip money on equipment the club keeps are all proposals about what the club owns for activity nights. They are on this page as separate items because they arrived separately. <strong>They compete for the same money.</strong></p>
+                  <p><strong>The honest comparison between buying and building.</strong> A console works the evening it arrives, needs no maintenance, and anyone can play it &mdash; but it teaches nothing, and it is not obviously what an IT club is for. The build teaches something on every night it is worked on and produces a machine the club owns at the end &mdash; but it does not exist yet, and a club that has no gaming night until December has a different problem. <strong>Doing a cheap version of both may well beat doing one of them properly.</strong></p>
+                  <p><strong>Three practical questions that have sunk this for other clubs.</strong> Where does it live between activity nights, and who is responsible for it. Whether equipment bought with club funds becomes college property under the college&rsquo;s own rules &mdash; worth asking before buying, not after. And whether four controllers is the right shape for the number of people who actually come, when board games cost a fraction and seat everybody.</p>
                 </div>
               </details>
             </li>
@@ -912,6 +915,8 @@
               </details>
             </li>
           </ol>
+            </div>
+          </details>
           <details class="fold">
             <summary>See all business meeting dates<span class="f-note">14 scheduled &middot;
             5 Thursdays the club cannot meet &middot; through May 2027</span></summary>
@@ -1314,8 +1319,126 @@
         is whatever somebody proposed and the members agreed to. If you want the club to
         run something, proposing it at a business meeting is the whole procedure.</p>
 
-        <p class="fine">The dates for the current term, including the weeks the club
-        cannot meet, are on the activity night card at the top of this page.</p>
+        <p><strong>You do not have to be a member to come to one.</strong> No dues, no
+        sign-up, and you do not have to be an IT student. Come and see what the club is.</p>
+
+        <details class="fold">
+          <summary>See all activity nights<span class="f-note">14 scheduled &middot;
+          5 Thursdays the club cannot meet &middot; through May 2027</span></summary>
+          <div class="fold-body">
+
+            <p>Dates marked <strong>no meeting</strong> are shown rather than dropped, so you
+            can see the date was considered and why it is out &mdash; each one is a college
+            closure or falls outside the semester, checked against the
+            <a href="https://www.mstc.edu/academic-calendar" target="_blank"
+            rel="noopener">Mid-State academic calendar</a>. If the college moves a date, this
+            table will not know.</p>
+
+            <div class="dates-wrap">
+              <table class="dates">
+                <thead><tr><th>Date</th><th>Time</th><th>Notes</th></tr></thead>
+                <tbody>
+              <tr>
+                <td class="d-when">Thu 17 Sep 2026</td>
+                <td><span class="d-tag-on">6:00 PM</span></td>
+                <td>Fall 2026 activity night</td>
+              </tr>
+              <tr>
+                <td class="d-when">Thu 1 Oct 2026</td>
+                <td><span class="d-tag-on">6:00 PM</span></td>
+                <td>Fall 2026 activity night</td>
+              </tr>
+              <tr>
+                <td class="d-when">Thu 15 Oct 2026</td>
+                <td><span class="d-tag-on">6:00 PM</span></td>
+                <td>Fall 2026 activity night</td>
+              </tr>
+              <tr>
+                <td class="d-when">Thu 29 Oct 2026</td>
+                <td><span class="d-tag-on">6:00 PM</span></td>
+                <td>Fall 2026 activity night</td>
+              </tr>
+              <tr>
+                <td class="d-when">Thu 12 Nov 2026</td>
+                <td><span class="d-tag-on">6:00 PM</span></td>
+                <td>Fall 2026 activity night</td>
+              </tr>
+              <tr class="off">
+                <td class="d-when">Thu 26 Nov 2026</td>
+                <td><span class="d-tag-off">No meeting</span></td>
+                <td>Fall Recess &mdash; college closed Nov 25&ndash;27</td>
+              </tr>
+              <tr>
+                <td class="d-when">Thu 10 Dec 2026</td>
+                <td><span class="d-tag-on">6:00 PM</span></td>
+                <td>Fall 2026 activity night</td>
+              </tr>
+              <tr class="off">
+                <td class="d-when">Thu 24 Dec 2026</td>
+                <td><span class="d-tag-off">No meeting</span></td>
+                <td>Winter Recess &mdash; college closed</td>
+              </tr>
+              <tr class="off">
+                <td class="d-when">Thu 7 Jan 2027</td>
+                <td><span class="d-tag-off">No meeting</span></td>
+                <td>Between semesters &mdash; the semester ended Dec 16 and the next starts Jan 25</td>
+              </tr>
+              <tr class="off">
+                <td class="d-when">Thu 21 Jan 2027</td>
+                <td><span class="d-tag-off">No meeting</span></td>
+                <td>Between semesters &mdash; the semester ended Dec 16 and the next starts Jan 25</td>
+              </tr>
+              <tr>
+                <td class="d-when">Thu 4 Feb 2027</td>
+                <td><span class="d-tag-on">6:00 PM</span></td>
+                <td>Spring 2027 activity night</td>
+              </tr>
+              <tr>
+                <td class="d-when">Thu 18 Feb 2027</td>
+                <td><span class="d-tag-on">6:00 PM</span></td>
+                <td>Spring 2027 activity night</td>
+              </tr>
+              <tr>
+                <td class="d-when">Thu 4 Mar 2027</td>
+                <td><span class="d-tag-on">6:00 PM</span></td>
+                <td>Spring 2027 activity night</td>
+              </tr>
+              <tr>
+                <td class="d-when">Thu 18 Mar 2027</td>
+                <td><span class="d-tag-on">6:00 PM</span></td>
+                <td>Spring 2027 activity night</td>
+              </tr>
+              <tr>
+                <td class="d-when">Thu 1 Apr 2027</td>
+                <td><span class="d-tag-on">6:00 PM</span></td>
+                <td>Spring 2027 activity night</td>
+              </tr>
+              <tr>
+                <td class="d-when">Thu 15 Apr 2027</td>
+                <td><span class="d-tag-on">6:00 PM</span></td>
+                <td>Spring 2027 activity night</td>
+              </tr>
+              <tr>
+                <td class="d-when">Thu 29 Apr 2027</td>
+                <td><span class="d-tag-on">6:00 PM</span></td>
+                <td>Spring 2027 activity night</td>
+              </tr>
+              <tr>
+                <td class="d-when">Thu 13 May 2027</td>
+                <td><span class="d-tag-on">6:00 PM</span></td>
+                <td>Spring 2027 activity night</td>
+              </tr>
+              <tr class="off">
+                <td class="d-when">Thu 27 May 2027</td>
+                <td><span class="d-tag-off">No meeting</span></td>
+                <td>May 19 was the last day of the semester</td>
+              </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+        </details>
 
       </div>
     </details>
@@ -1758,9 +1881,9 @@
             <span class="cyc-badge am-pend">Pending</span>
           </summary>
           <div class="cycle-inner">
-              <div class="am-row"><span class="am-k">Vote due</span><span class="am-v">2026-09-24</span></div>
+              <div class="am-row"><span class="am-k">Vote due</span><span class="am-v">2026-10-08</span></div>
               <div class="am-row"><span class="am-k">Changes</span><span class="am-v">Article II, Section 2</span></div>
-              <div class="am-row"><span class="am-k">Notice</span><span class="am-v">Given 2026-09-07 (17 days before the vote)</span></div>
+              <div class="am-row"><span class="am-k">Notice</span><span class="am-v">Given 2026-09-07 (31 days before the vote)</span></div>
               <p>The dues figure is written into the constitution, so changing it is an amendment rather than an ordinary vote. Raising it needs two-thirds and five days' notice like any other change to the document.</p>
               <div class="am-text">
                 <div class="am-t-h">As it reads now</div>
@@ -1781,9 +1904,9 @@
             <span class="cyc-badge am-pend">Pending</span>
           </summary>
           <div class="cycle-inner">
-              <div class="am-row"><span class="am-k">Vote due</span><span class="am-v">2026-09-24</span></div>
+              <div class="am-row"><span class="am-k">Vote due</span><span class="am-v">2026-10-08</span></div>
               <div class="am-row"><span class="am-k">Changes</span><span class="am-v">Article VII, Section 1</span></div>
-              <div class="am-row"><span class="am-k">Notice</span><span class="am-v">Given 2026-09-07 (17 days before the vote)</span></div>
+              <div class="am-row"><span class="am-k">Notice</span><span class="am-v">Given 2026-09-07 (31 days before the vote)</span></div>
               <p>The clause requires funds to be ratified by “officers as listed in Article II”. Article II is Membership and Dues; officers are Article III. The clause as written points at the wrong article.</p>
               <div class="am-text">
                 <div class="am-t-h">As it reads now</div>
@@ -1829,9 +1952,9 @@
             <span class="cyc-badge am-pend">Pending</span>
           </summary>
           <div class="cycle-inner">
-              <div class="am-row"><span class="am-k">Vote due</span><span class="am-v">2026-09-24</span></div>
+              <div class="am-row"><span class="am-k">Vote due</span><span class="am-v">2026-10-08</span></div>
               <div class="am-row"><span class="am-k">Changes</span><span class="am-v">Article II (new section)</span></div>
-              <div class="am-row"><span class="am-k">Notice</span><span class="am-v">Given 2026-09-07 (17 days before the vote)</span></div>
+              <div class="am-row"><span class="am-k">Notice</span><span class="am-v">Given 2026-09-07 (31 days before the vote)</span></div>
               <p>Article III §3 requires a nomination to come from a “paid member in good standing”, but the constitution never says what good standing is. In practice it has meant three things: <strong>dues are paid for the current semester, the member actually comes to meetings and gatherings, and the member is not failing a class or carrying a GPA below 2.0.</strong> The attendance part is what the phrase is really for &mdash; it is the reason a student who does not come to meetings does not get club money toward a large event such as CypherCon. Writing it down makes the standard the same for everyone instead of a matter of who remembers what.</p>
               <div class="am-text">
                 <div class="am-t-h">As it reads now</div>
